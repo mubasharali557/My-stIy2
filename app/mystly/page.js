@@ -1,4 +1,6 @@
 "use client";
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 import { useState, useRef, useEffect, useCallback } from "react";
 /* ─── Google Fonts ─── */
 const fontLink = document.createElement("link");
@@ -10,10 +12,6 @@ document.head.appendChild(fontLink);
 const jspdfScript = document.createElement("script");
 jspdfScript.src = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
 document.head.appendChild(jspdfScript);
-
-/* ══════════════════════════════════════
-   COLOR UTILS
-══════════════════════════════════════ */
 function rgbToHex(r, g, b) {
   return "#" + [r, g, b].map(v => v.toString(16).padStart(2, "0")).join("");
 }
